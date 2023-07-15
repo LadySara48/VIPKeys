@@ -98,8 +98,8 @@ Class VIPKeys extends PluginBase{
 	private function initCommands(): void{
         $commands = [
 
-			new vipkeyCommand($this),
-			new reedemCommand($this)
+			new vipkeyCommand(),
+			new reedemCommand()
         ];
 
         $this->getServer()->getCommandMap()->registerAll("HearlovVIPKeys", $commands);
