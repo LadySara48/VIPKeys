@@ -1,0 +1,16 @@
+---
+#@language folder
+language: eng
+
+#@vips
+vips:
+ - vip
+ - vipplus
+ 
+#economy EconomyAPI
+economy: false
+givemoney:
+ vip: 100
+ vipplus: 200
+
+...
