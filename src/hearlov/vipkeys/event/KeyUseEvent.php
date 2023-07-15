@@ -10,6 +10,10 @@ use pocketmine\player\Player;
 
 Class KeyUseEvent extends PluginEvent{
 
+	private $player;
+	private $key;
+	private $buyname;
+	
 	public function __construct(
 	VIPKeys $plugin,
 	Player $player,
