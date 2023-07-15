@@ -12,7 +12,7 @@ use hearlov\vipkeys\forms\VIPKeysMainForm;
 
 class vipkeyCommand extends Command {
 
-    public function __construct(VIPKeys $owner){
+    public function __construct(){
         parent::__construct("vipkeys");
         $this->setDescription("VIP Keys open");
 	$this->setPermission("vipkeys.admin.menu");
