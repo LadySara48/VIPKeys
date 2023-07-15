@@ -8,7 +8,7 @@ use pocketmine\player\Player;
 
 //ErvaAblaPro22
 
-Class keyUseEvent extends PluginEvent{
+Class KeyUseEvent extends PluginEvent{
 
 	public function __construct(
 	VIPKeys $plugin,
