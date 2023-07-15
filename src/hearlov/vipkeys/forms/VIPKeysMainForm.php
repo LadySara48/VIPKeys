@@ -23,7 +23,6 @@ class VIPKeysMainForm extends MenuForm{
 		new MenuOption($plugin->getLanguage("menu.admin.button.usedcodes"), new FormIcon("textures/ui/cancel", FormIcon::IMAGE_TYPE_PATH))
 		];
         parent::__construct($plugin->getLanguage("menu.admin.title"), $plugin->getLanguage("menu.admin.text"), $buttons, function (Player $player, int $selected) use ($plugin): void {
-            if(isset($selected)){
 				$select = $this->getOption($selected)->getText();
 				switch($select){
 					case $plugin->getLanguage("menu.admin.button.newcode"):
@@ -43,7 +42,6 @@ class VIPKeysMainForm extends MenuForm{
 					$player->sendForm(new UsedListForm());
 					break;
 				}
-			}
         });
     }
 }
