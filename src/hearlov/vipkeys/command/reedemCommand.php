@@ -12,7 +12,7 @@ use hearlov\vipkeys\forms\ReedemForm;
 
 class reedemCommand extends Command {
 
-    public function __construct(VIPKeys $owner){
+    public function __construct(){
         parent::__construct("reedem");
         $this->setDescription("Reedem Command");
 	$this->setPermission("vipkeys.menu");
