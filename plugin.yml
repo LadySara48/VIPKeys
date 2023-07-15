@@ -3,7 +3,7 @@ author: Hearlov
 main: hearlov\vipkeys\VIPKeys
 version: 1.0
 api: 5.0.0
-description: Provides VIP purchase with code
+description: Provides VIP purchase with codes
 permissions:
   vipkeys.admin.menu:
     default: op
