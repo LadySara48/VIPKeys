@@ -4,6 +4,10 @@ main: hearlov\vipkeys\VIPKeys
 version: 1.0
 api: 5.0.0
 description: Provides VIP purchase with codes
+depend:
+ - PurePerms
+softdepend:
+ - EconomyAPI
 permissions:
   vipkeys.admin.menu:
     default: op
