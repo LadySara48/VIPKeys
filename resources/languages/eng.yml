@@ -1,0 +1,44 @@
+#reedem
+menu.reedem.title: "Reedem is code"
+menu.reedem.label: "Enter the Reedem code"
+menu.reedem.inputlabel: "Enter Code"
+menu.reedem.error.vipexists: "I do not find Reedem VIP Group"
+menu.reedem.error.reedemexists: "Reedem code is not available"
+menu.reedem.error.used: "Reedem code already used"
+menu.reedem.success: "Code is Reedemed. The product you bought:"
+
+#AdminMain
+menu.admin.title: "VIPKeys Admin Menu"
+menu.admin.text: "Select the menu"
+menu.admin.button.newcode: "Create Reedem Code"
+menu.admin.button.remcode: "Remove Reedem Code"
+menu.admin.button.codes: "Available Codes"
+menu.admin.button.usedcodes: "Used Codes"
+
+#NewCodeForm
+menu.admin.newcode.err: "Momentary Error. Try Again"
+menu.admin.newcode.title: "New Code Generate"
+menu.admin.newcode.text: "What product are you going to create?"
+menu.admin.newcode.success: "Reedem code creation is Successfull."
+menu.admin.newcode.success.role: "Code for Group: §6"
+menu.admin.newcode.success.code: "Code for Reedem Code: §6"
+
+#RemCodeForm
+menu.admin.remcode.title: "Remove Code"
+menu.admin.remcode.text: "Select Remove Code"
+menu.admin.remcode.success: "Reedem code has removed"
+menu.admin.remcode.err: "I do not find Reedem"
+menu.admin.remcode.used: "§4Used"
+menu.admin.remcode.active: "§2Active"
+
+#ListCodeForm
+menu.admin.listcode.title: "Reedem Code List"
+menu.admin.listcode.text: "All Reedem Codes"
+
+#UsedListForm
+menu.admin.usedlist.title: "Used Reedem Code List"
+menu.admin.usedlist.text: "All Used Reedem Codes"
+
+#Other
+error.permission: "You do not have sufficient privileges to perform this operation."
+player: "Player: "

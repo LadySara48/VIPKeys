@@ -1,0 +1,10 @@
+@@#Get Instant
+"name";"VIPKeys"
+"version";"1 0"
+"api";"PMMP-5"
+"description";"Reedem VIP to key code"
+
+\\Code of Instant
+"infos";&
+  "Plugin Use";"<h1>VIPKeys use book</h1><br><p>Access the VIPKeys Admin menu using the /vipkeys command. Can automatically process VIP set up with /reedem to your account</p>"
+  "Plugin Bite";"Built for learning. May not include long-term transactions"
