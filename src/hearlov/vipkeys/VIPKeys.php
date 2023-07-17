@@ -14,7 +14,8 @@ Class VIPKeys extends PluginBase{
 
 	//Get YAML Keys
 	private $keys;
-	
+
+	//Language Config
 	public $lang;
 	
 	private static $instance = null;
@@ -26,11 +27,11 @@ Class VIPKeys extends PluginBase{
 		$this->initCommands();
 	}
 	
-	public function reloadPlugin(){
+	/*public function reloadPlugin(){
 		$this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
 		$this->keys = new Config($this->getDataFolder() . "keys.yml", Config::YAML);
 		$this->lang = new Config($this->getDataFolder() . "languages/" . $this->config->get("language") . ".yml", Config::YAML);
-	}
+	}*/
 	
 	public function onLoad(): void{
 		self::$instance = $this;
@@ -42,16 +43,25 @@ Class VIPKeys extends PluginBase{
 	
 	public function getConfig(): Config{
 		return $this->config;
-	} //66675
-	
+	}
+
+	/*
+	* Return (language/lang.yml) String
+ 	*/
 	public function getLanguage($cont): String{
 		return $this->lang->get($cont);
 	}
 
+	/*
+ 	* Return randomized key code
+	*/
 	public function getCustomRCode(int $length = 12): string{
 		return substr(str_shuffle(str_repeat($x='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', 	ceil($length/strlen($x)) )),1,$length);
 	}
 
+	/*
+	* Return true|false
+ 	*/
 	public function in_key(string $key): bool{
 		return in_array($key, array_keys($this->keys->getAll()));
 	}
