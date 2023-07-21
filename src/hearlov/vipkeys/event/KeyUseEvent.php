@@ -26,14 +26,24 @@ Class KeyUseEvent extends PluginEvent{
 		$this->buyname = $buyname;
 	} 
 
+	/*
+ 	* return Player
+	*/
 	public function getPlayer(): Player{
 		return $this->player;
 	}
 
+	/*
+ 	* return String
+  	* key code
+	*/
 	public function getKey(){
 		return $this->key;
 	} 
 
+	/*
+ 	* return String (Group Name)
+	*/
 	public function getBuyName(){
 		return $this->buyname;
 	}  
