@@ -23,16 +23,18 @@ Class VIPKeys extends PluginBase{
 	public function onEnable(): void{
 		$this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
 		$this->keys = new Config($this->getDataFolder() . "keys.yml", Config::YAML);
-		$this->lang = new Config($this->getDataFolder() . "languages/" . $this->config->get("language") . ".yml", Config::YAML);
+		$langcnf = new Config($this->getDataFolder() . "lang.yml", Config::YAML);
+		$this->lang = $langcnf->get($this->config->get("language"));
 		$this->initCommands();
 	}
 	
-	/*public function reloadPlugin(){
+	public function reloadPlugin(){
 		$this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
 		$this->keys = new Config($this->getDataFolder() . "keys.yml", Config::YAML);
-		$this->lang = new Config($this->getDataFolder() . "languages/" . $this->config->get("language") . ".yml", Config::YAML);
-	}*/
-	
+		$langcnf = new Config($this->getDataFolder() . "lang.yml", Config::YAML);
+		$this->lang = $langcnf->get($this->config->get("language"));
+	}
+
 	public function onLoad(): void{
 		self::$instance = $this;
 	}
@@ -45,11 +47,16 @@ Class VIPKeys extends PluginBase{
 		return $this->config;
 	}
 
+	public function setConfigVariant(Int $int){
+		$this->config->set("code-length", $int);
+		$this->config->save();
+	}
+
 	/*
-	* Return (language/lang.yml) String
+	* Return (lang.yml) String
  	*/
 	public function getLanguage($cont): String{
-		return $this->lang->get($cont);
+		return ($this->lang[$cont] ? $this->lang[$cont] : "NoLanguage");
 	}
 
 	/*
@@ -96,7 +103,8 @@ Class VIPKeys extends PluginBase{
 	}
 
 	public function generateKey($group): string{
-		$key = $this->getCustomRCode();
+		$keyleng = $this->config->get("code-length");
+		$key = $this->getCustomRCode($keyleng);
 		if(!$this->in_key($key)){
 			$this->keys->set($key, ["used" => false, "player" => "none", "group" => $group]);
 			$this->keys->save();
