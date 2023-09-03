@@ -20,6 +20,7 @@ Features:
  - Remove Code
  - List Codes
  - Used List Codes
+ - Settings
 
 # Config
 
@@ -35,6 +36,9 @@ If you want to reedem vip code in givemoney player
 
 `language: eng`
 Plugin have a Turkish (tur) and English (eng)
+
+`code-length: 12`
+Key Code Length 8-32 (32 up to server disabled)
 
 # Depend
 Plugin depend to PurePerms
