@@ -2,6 +2,8 @@
 #@language folder
 language: eng
 
+code-length: 12
+
 #@vips
 vips:
  - vip
