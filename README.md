@@ -1,5 +1,7 @@
 ![VIPKeys]((https://github.com/LadySara48/VIPKeys/blob/b62aa8e69fdd38cb7e7a267760c7ee5d4e56322f/icon.png?raw=true))
 
+### VIPKeys Beta
+Plugin has not releases
 ### Usage
 
 `/reedem` to opened menu
