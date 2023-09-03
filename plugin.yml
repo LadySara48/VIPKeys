@@ -1,7 +1,7 @@
 name: VIPKeys
 author: Hearlov
 main: hearlov\vipkeys\VIPKeys
-version: 1.0
+version: 1.1.2
 api: 5.0.0
 description: Provides VIP purchase with codes
 depend:
@@ -14,6 +14,8 @@ permissions:
   vipkeys.admin.menu.newkey:
     default: op
   vipkeys.admin.menu.remkey:
+    default: op
+  vipkeys.admin.menu.settings:
     default: op
   vipkeys.menu:
     default: true
