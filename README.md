@@ -11,6 +11,8 @@ Basic config editing
 [![](https://poggit.pmmp.io/shield.downloads/VIPKeys?style=for-the-badge)](https://poggit.pmmp.io/ci/hearlov/VIPKeys/VIPKeys/)
 [![](https://poggit.pmmp.io/shield.downloads.total/VIPKeys?style=for-the-badge)](https://poggit.pmmp.io/ci/hearlov/VIPKeys/VIPKeys/)
 [![](https://poggit.pmmp.io/shield.state/VIPKeys?style=for-the-badge)](https://poggit.pmmp.io/ci/hearlov/VIPKeys/VIPKeys/)
+[![](https://poggit.pmmp.io/shield.state/VIPKeys)](https://poggit.pmmp.io/p/VIPKeys)
+[![](https://poggit.pmmp.io/shield.api/VIPKeys)](https://poggit.pmmp.io/p/VIPKeys)
 
 # Admin Usage
 
