@@ -1,5 +1,23 @@
 <?php
 
+/**
+*
+*  ___             _______________  
+* |  |            |  _____________| 
+* |  |            |  |               
+* |  |            |  |               
+* |  |            |  | 
+* |  |            |  |____________ 
+* |  |            |_____________  |
+* |  |                         |  |
+* |  |                         |  |
+* |  |                         |  |
+* |  |_________   _____________|  |  
+* |____________| |________________| 
+*
+* Hearlov to https://hearlov.net
+*/
+
 namespace hearlov\vipkeys;
 
 use pocketmine\{Server, player\Player, plugin\PluginBase, utils\Config};
