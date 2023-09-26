@@ -120,7 +120,7 @@ Class VIPKeys extends PluginBase{
 			new reedemCommand()
         ];
 
-        $this->getServer()->getCommandMap()->registerAll("HearlovVIPKeys", $commands);
+        $this->getServer()->getCommandMap()->registerAll("VIPKeys", $commands);
     }
 
 }

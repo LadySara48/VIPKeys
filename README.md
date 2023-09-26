@@ -36,6 +36,9 @@ vips to vip group name
 `economy: false` false|true
 If you want to reedem vip code in givemoney player
 
+`economy-plugin: BedrockEconomy`
+BedrockEconomy or EconomyAPI
+
 `language: eng`
 Plugin have a Turkish (tur) and English (eng)
 

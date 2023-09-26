@@ -1,5 +1,5 @@
 ---
-#lang.yml file in array
+#@language folder
 language: eng
 
 code-length: 12
@@ -11,6 +11,8 @@ vips:
  
 #economy EconomyAPI
 economy: false
+#EconomyAPI and BedrockEconomy
+economy-plugin: "BedrockEconomy"
 givemoney:
  vip: 100
  vipplus: 200

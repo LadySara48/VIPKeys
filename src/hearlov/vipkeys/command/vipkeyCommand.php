@@ -8,14 +8,15 @@ use pocketmine\{command\Command,
 use hearlov\vipkeys\VIPKeys;
 use pocketmine\world\World;
 use pocketmine\world\Position;
+use pocketmine\plugin\PluginOwned;
 use hearlov\vipkeys\forms\VIPKeysMainForm;
 
-class vipkeyCommand extends Command {
+class vipkeyCommand extends Command implements PluginOwned{
 
     public function __construct(){
         parent::__construct("vipkeys");
         $this->setDescription("VIP Keys open");
-	$this->setPermission("vipkeys.admin.menu");
+	    $this->setPermission("vipkeys.admin.menu");
     }
 
     public function execute(CommandSender $player, string $commandLabel, array $args): bool{
@@ -23,5 +24,9 @@ class vipkeyCommand extends Command {
 		$player->sendForm(new VIPKeysMainForm());
         }
         return true;
+    }
+
+    public function getOwningPlugin(): VIPKeys{
+        return VIPKeys::getInstance();
     }
 }

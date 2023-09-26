@@ -6,6 +6,7 @@ use hearlov\vipkeys\libs\dktapps\pmforms\{MenuOption, MenuForm, FormIcon};
 use pocketmine\player\Player;
 use pocketmine\Server;
 use hearlov\vipkeys\VIPKeys;
+use hearlov\vipkeys\event\SettingEvent;
 use hearlov\vipkeys\forms\EditLengthForm;
 
 class SettingsForm extends MenuForm{
@@ -23,6 +24,11 @@ class SettingsForm extends MenuForm{
 					$player->sendForm(new EditLengthForm());
 				break;
 				case 1:
+
+					$event = new SettingEvent($plugin, $player, SettingEvent::RELOAD_PLUGIN);
+					$event->call();
+					if($event->isCancelled()) return;
+					
 					$plugin->reloadPlugin();
 				break;
 			}

@@ -10,23 +10,20 @@ use pocketmine\player\Player;
 
 //ErvaAblaPro22
 
-Class KeyUseEvent extends PluginEvent implements Cancellable{
-	use CancellableTrait;
+Class KeyDeletionEvent extends PluginEvent implements Cancellable{
+    use CancellableTrait;
 
 	private $player;
 	private $key;
-	private $buyname;
 	
 	public function __construct(
 	VIPKeys $plugin,
 	Player $player,
-	String $key,
-	String $buyname
+	String $key
 	){
 		parent::__construct($plugin);
 		$this->player = $player;
 		$this->key = $key;
-		$this->buyname = $buyname;
 	} 
 
 	/*
@@ -43,12 +40,5 @@ Class KeyUseEvent extends PluginEvent implements Cancellable{
 	public function getKey(){
 		return $this->key;
 	} 
-
-	/*
- 	* return String (Group Name)
-	*/
-	public function getBuyName(){
-		return $this->buyname;
-	}  
 
 }

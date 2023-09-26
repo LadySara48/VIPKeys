@@ -20,3 +20,8 @@
     2;"New Language System"
     3;"Language Update"
     4;"New Admin Menu in Settings"
+"1.2.7";&
+  "News";&
+    0;"New Events"
+    1;"Used is PocketMine plugin rules"
+    2;"Added Event Cancellable"
