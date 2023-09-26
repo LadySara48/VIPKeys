@@ -1,5 +1,5 @@
 ---
-#@language folder
+#lang.yml file in array
 language: eng
 
 code-length: 12
