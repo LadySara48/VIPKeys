@@ -15,7 +15,7 @@
 * |  |_________   _____________|  |  
 * |____________| |________________| 
 *
-* Hearlov to https://hearlov.net
+* Hearlov to discord "hearlov"
 */
 
 namespace hearlov\vipkeys;
