@@ -1,7 +1,5 @@
 ![VIPKeys]((https://github.com/LadySara48/VIPKeys/blob/b62aa8e69fdd38cb7e7a267760c7ee5d4e56322f/icon.png?raw=true))
 
-### VIPKeys Beta
-Plugin has not releases
 ### Usage
 
 `/reedem` to opened menu
@@ -22,7 +20,6 @@ Features:
  - Remove Code
  - List Codes
  - Used List Codes
- - Settings
 
 # Config
 
@@ -38,9 +35,6 @@ If you want to reedem vip code in givemoney player
 
 `language: eng`
 Plugin have a Turkish (tur) and English (eng)
-
-`code-length: 12`
-Key Code Length 8-32 (32 up to server disabled)
 
 # Depend
 Plugin depend to PurePerms

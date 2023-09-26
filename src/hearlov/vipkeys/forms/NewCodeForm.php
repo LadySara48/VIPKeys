@@ -3,8 +3,8 @@
 namespace hearlov\vipkeys\forms;
 
 use hearlov\vipkeys\libs\dktapps\pmforms\{MenuOption, MenuForm, FormIcon};
+use hearlov\vipkeys\event\KeyCreationEvent;
 use pocketmine\player\Player;
-use pocketmine\Server;
 use hearlov\vipkeys\VIPKeys;
 
 class NewCodeForm extends MenuForm{
@@ -19,6 +19,11 @@ class NewCodeForm extends MenuForm{
 		}
         parent::__construct($plugin->getLanguage("menu.admin.newcode.title"), $plugin->getLanguage("menu.admin.newcode.text"), $buttons, function (Player $player, int $selected) use ($plugin): void {
 			$group = $this->getOption($selected)->getText();
+
+			$event = new KeyCreationEvent($plugin, $player, $group);
+			$event->call();
+			if($event->isCancelled()) return;
+			
             $newcode = $plugin->generateKey($group);
 			if($newcode != "none"){
 				$player->sendMessage("§a> " . $plugin->getLanguage("menu.admin.newcode.success") . "\n" . $plugin->getLanguage("menu.admin.newcode.success.role") . $group . "\n" . $plugin->getLanguage("menu.admin.newcode.success.code") . $newcode);

@@ -8,14 +8,15 @@ use pocketmine\{command\Command,
 use hearlov\vipkeys\VIPKeys;
 use pocketmine\world\World;
 use pocketmine\world\Position;
+use pocketmine\plugin\PluginOwned;
 use hearlov\vipkeys\forms\ReedemForm;
 
-class reedemCommand extends Command {
+class reedemCommand extends Command implements PluginOwned {
 
     public function __construct(){
         parent::__construct("reedem");
         $this->setDescription("Reedem Command");
-	$this->setPermission("vipkeys.menu");
+	    $this->setPermission("vipkeys.menu");
     }
 
     public function execute(CommandSender $player, string $commandLabel, array $args): bool{
@@ -23,5 +24,9 @@ class reedemCommand extends Command {
 		$player->sendForm(new ReedemForm());
         }
         return true;
+    }
+
+    public function getOwningPlugin(): VIPKeys{
+        return VIPKeys::getInstance();
     }
 }
